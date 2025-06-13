@@ -12,7 +12,6 @@
       background-image: url(./img/background.webp) !important;
       background-size: cover;
       background-repeat: no-repeat;
-      margin-top: 110px;
     }
 
     .product-card {
@@ -22,6 +21,9 @@
       border: 1px solid #ccc;
       border-radius: 16px;
       transition: transform 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .product-card:hover {
@@ -33,7 +35,6 @@
       /* width: 100px;
       height: 100px; */
       object-fit: cover;
-      margin-top: 35%;
       width: 95%;
     }
 
@@ -53,23 +54,78 @@
       background-color: #511851;
     }
 
+    .product-card.bg-red {
+      background-color: #c40000;
+    }
+
+    .product-card.bg-green {
+      background-color: rgb(46, 150, 89);
+    }
+
     .logo {
       width: 35%;
     }
+
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      padding-top: 1%;
+      color: #fff;
+    }
+
+    hr {
+      height: 2px;
+      background-color: transparent;
+      background-image: linear-gradient(to right, transparent, #55c02f, transparent);
+      display: flex;
+      width: 100%;
+      margin: 3vh auto;
+      border: none !important;
+    }
+
+    /* EXIBIÇÃO EM CELULAR */
+    @media only screen and (min-width: 375px) and (max-width: 899px) {
+      body {
+        background-color: #000;
+        background-image: none !important;
+      }
+
+      .logo {
+        width: 100%;
+      }
+
+      p {
+        padding-top: 7%;
+        color: #fff;
+        width: 85%;
+        margin: 0 auto;
+      }
+    }
+
+    /* EXIBIÇÃO EM TABLET */
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      p {
+        padding-top: 5%;
+      }
   </style>
 </head>
 
-<body class="bg-light">
-
+<body>
   <div class="container py-5 text-center">
-    <h1 class="mb-5"><img class="logo" src="./img/STI3.webp" alt=""></h1>
+    <h1 class="mb-5">
+      <img class="logo" src="./img/STI3.webp" alt="">
+      <p>Conheça mais sobre o seu sistema!</p>
+    </h1>
+
     <div class="d-flex justify-content-center flex-wrap gap-4">
-      <a href="https://sti3implantacao.github.io/fomer/" class="text-decoration-none text-dark">
+      <a href="#" class="text-decoration-none text-dark">
         <div class="product-card bg-pink">
           <img src="./img/Fomer.webp" alt="Fomer">
         </div>
       </a>
-      <a href="https://sti3implantacao.github.io/zendar/" class="text-decoration-none text-dark">
+      <a href="#" class="text-decoration-none text-dark">
         <div class="product-card bg-purple">
           <img src="./img/Zendar.webp" alt="Zendar">
         </div>
@@ -79,9 +135,24 @@
           <img src="./img/Powerchef.webp" alt="Power Chef">
         </div>
       </a>
-      <a href="https://sti3implantacao.github.io/powerstock/" class="text-decoration-none text-dark">
+      <a href="#" class="text-decoration-none text-dark">
         <div class="product-card bg-blue">
           <img src="./img/Powerstock.webp" alt="Power Stock">
+        </div>
+      </a>
+    </div>
+
+    <hr>
+
+    <div class="d-flex justify-content-center flex-wrap gap-4">
+      <a href="#" class="text-decoration-none text-dark">
+        <div class="product-card bg-red">
+          <h2>Erros Comuns</h2>
+        </div>
+      </a>
+      <a href="#" class="text-decoration-none text-dark">
+        <div class="product-card bg-green">
+          <h2>Equipamentos Recomendados</h2>
         </div>
       </a>
     </div>
@@ -89,4 +160,4 @@
 
 </body>
 
-</html>]
+</html>
